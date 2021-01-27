@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div style="height: 800px;" id="canvas"></div>
+<script type="text/javascript" charset="utf-8" src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/qunee-min.js"></script>
+<script type="text/javascript">
+    var graph = new Q.Graph('canvas');
+
+    var hello = graph.createNode("Hello", 1, 2);
+    var qunee = graph.createNode("测试", 512, 458);
+    var aa = graph.createNode("Qunee", 30, 70);
+    var edge = graph.createEdge("Hello\nQunee", hello, qunee);
+     var a = graph.createEdge(hello, aa);
+     graph.enddrag = function(evt){
+         console.log(evt)
+         console.log(qunee)
+}
+     console.log(hello)
+</script>
+
+
+
+</body>
+</html>
+
+
